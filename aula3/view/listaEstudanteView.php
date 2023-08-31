@@ -10,21 +10,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Semana da Acessibilidade</h1>
-<img src="https://img.olhardigital.com.br/wp-content/uploads/2023/01/por-que-ceu-azul.jpg" alt="Imagem da Semana da Acessibilidade">
-    <table class="table">
-    <thead>
-            <tr>
-                <th>Nome</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($estudantes as $estudanteAtual) { ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>Semana da acessibilidade</h2>
+        </div>
+
+        <div class="text-center">
+            <img class="rounded" src="https://cta.ifrs.edu.br/wp-content/uploads/sites/3/2018/12/18_BoasPrativasDescricaoImagens.jpg" alt="Representação gráfica de como uitilizar a tag alt em uma imagem para pessoas com deficiência visual">
+        </div>
+
+        <br>
+        <br>
+    
+        <table class="table table-dark">
+            <thead>
                 <tr>
-                    <td><?php echo $estudanteAtual["nome"]; ?></td>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+            </thead>
+
+            <tbody>
+                <?php foreach($estudantes as $estudantesAtual) { ?>
+                    <tr>
+                        <td><?php echo $estudantesAtual["id"]; ?></td>
+                        <td><?php echo $estudantesAtual["nome"]; ?></td>
+                        <td><?php echo $estudantesAtual["idade"]; ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+
+    </div>
 </body>
 </html>
